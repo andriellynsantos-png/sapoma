@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sapo Matemático</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+<div id="stage"><canvas id="cv" role="img" aria-label="Cenário: sapo pulando em vitórias-régias"></canvas><button class="mute" id="mute" aria-label="Ligar ou desligar o som">🔊</button><div id="ttl">SAPO<br>MATEMÁTICO</div></div>
+
+<section class="pn" id="title">
+  <div class="top"><span class="tag" id="tCoins"></span><span class="tag" id="tWins"></span></div>
+  <p>Pule de vitória-régia em vitória-régia acertando as contas. Errou? O jacaré chega mais perto!</p>
+  <div class="pills" id="ops"></div>
+  <button class="btn" id="start">JOGAR</button>
+  <button class="btn" id="goShop">LOJA</button>
+</section>
+
+<section class="pn" id="game" hidden>
+  <div class="top"><span class="tag" id="prog"></span><span class="tag" id="gap"></span><span class="tag" id="gCoins"></span></div>
+  <div class="timer"><i id="bar"></i></div>
+  <div id="tnum" style="font-size:12px"></div>
+  <div class="qwrap"><div class="tab" id="tab"></div><div class="q" id="q"></div></div>
+  <div class="ans" id="ans"></div>
+  <div class="fb" id="fb" aria-live="polite"></div>
+  <button class="btn" id="cont" hidden>CONTINUAR</button>
+</section>
+
+<section class="pn" id="end" hidden>
+  <h1 id="eTitle"></h1>
+  <p id="eTxt"></p>
+  <button class="btn" id="again">JOGAR DE NOVO</button>
+  <button class="btn" id="eShop">LOJA</button>
+  <button class="btn" id="eMenu">MENU</button>
+</section>
+
+<section class="pn" id="shop" hidden>
+  <div class="top"><h1 style="margin:0">LOJA</h1><span class="tag" id="sCoins"></span></div>
+  <p id="sMsg" style="min-height:30px">Acerte contas para ganhar moedas.</p>
+  <div class="swap"><span id="cast"></span><span><button class="btn" id="swap1">TROCAR 1 🏰</button> <button class="btn" id="swapAll">TROCAR TODOS</button></span></div>
+  <div class="shop" id="items"></div>
+  <button class="btn" id="back">VOLTAR</button>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
